@@ -1,0 +1,86 @@
+/* Reset + base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: rgb(192, 204, 207); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Login_div {
+  width: 100%;
+  max-width: 400px;
+  background: #ffffff;
+  padding: 35px 40px;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+.Login_div form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.Login_div label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Inputs */
+.Login_div input {
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: all 0.25s ease;
+  outline: none;
+}
+
+/* Input focus effect */
+.Login_div input:focus {
+  border-color: #2c5364;
+
+}
+
+
+.Login_div button {
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: rgb(177, 156, 92);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+
+}
+
+
+.Login_div a {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 13px;
+  color: #2c5364;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.Login_div a:hover {
+  color: #1a2f3a;
+  text-decoration: underline;
+}
+
+

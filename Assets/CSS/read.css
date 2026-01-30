@@ -1,0 +1,151 @@
+/* Reset + base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family:  sans-serif;
+
+}
+
+body {
+  background: #f3f6fb; 
+  min-height: 100vh;
+  padding: 40px 20px;
+  color: #333;
+}
+
+/* Page container */
+.container {
+  max-width: 1100px;
+  /* center block level element horizontally */
+  margin: 0 auto; 
+}
+
+/* Page title */
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color:  #4780b2;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+
+a.btn {
+  display: inline-block;
+  margin-bottom: 18px;
+  /* means 9 px from top and bottom 16 px from left to right */
+  padding: 9px 16px;
+  background: green;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+
+
+   } 
+
+a.btn:hover {
+  background: #1f5fb8;
+  box-shadow: 0 6px 14px rgba(117, 177, 192, 0.35);
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  border-collapse: collapse;
+}
+
+table, th, td,tr {
+  border: 2px solid #3e5871;;  
+}
+
+table th {
+  background: #3e5871;
+  color: #ffffff;
+  padding: 12px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 600;
+}
+
+
+table td {
+  padding: 12px;
+  font-size: 14px;
+  color: #000000;
+  text-align: center;
+}
+
+
+
+
+/* Action links */
+table a {
+  color: #2d74da;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  margin: 0 6px;
+  transition: color 0.2s ease;
+}
+
+table a:hover {
+  color: #1f5fb8;
+  text-decoration: underline;
+}
+
+
+table a[href*="delete"] {
+  color: #dc3545;
+}
+/*  It selects all links inside tables whose href contains the word "delete
+ */
+table a[href*="delete"]:hover {
+  color: #b02a37;
+}
+.logout{
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 8px;
+    border-radius: 12px;
+    border: none;
+    background-color: rgb(224, 56, 56);
+    color: white;
+    cursor: pointer;
+}
+.logout:hover{
+background-color:rgb(213, 97, 97);
+cursor: pointer;
+}
+#search {
+  padding: 10px 12px;  
+  border-radius: 12px;    
+  border: 1px solid #ccd3dd; 
+  font-size: 14px;        
+  margin-left: 1200px;  
+  margin-bottom: 20px;    
+border: none;
+color: black;
+width: 250px;
+text-align: center;
+
+}
+
+
+#addMovie {
+  width: 15%;
+  margin-top: 10px;
+  padding: 11px;
+  background: #03db4b;
+  color: #ffffff;
+  border: none;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
