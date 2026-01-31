@@ -76,22 +76,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <h1>Add Movies</h1>
         <label for="Moviename">Enter Movie name: </label>
-        <input type="text" name="movie" id="Moviename"> <br>
+        <input type="text" name="movie" id="Moviename" required> <br>
 
         <label for="genre">Enter Movie Genre: </label>
-        <input type="text" name="moviegenre" id="genre"><br>
+        <input type="text" name="moviegenre" id="genre" required><br>
 
 
         <label for="cast">Enter Movie Cast: </label>
-        <input type="text" name="moviecast" id="cast"><br>
+        <input type="text" name="moviecast" id="cast" required ><br>
 
 
         <label for="year">Enter Movie Release Date: </label>
-        <input type="Date" name="year" id="year"><br>
+        <input type="Date" name="year" id="year" required><br>
 
 
         <label for="Rating">Enter Movie Rating: </label>
-        <select id="Rating" name="rating">
+        <select id="Rating" name="rating" required>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>

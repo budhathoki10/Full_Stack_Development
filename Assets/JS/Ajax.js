@@ -29,7 +29,7 @@ search.addEventListener("input", (e) => {
           ? `
        <td>
                         <a href="edit.php?id=${movies.id}"> <i class="fa-solid fa-pen-to-square"></i>  Edit</a>
-                        <a href="delete.php?id=${movies.id}" onclick="return confirm('Do you Really want to delete this movie')"><i class="fa-solid fa-trash-can"></i></i> Delete</a>
+                        <a href="delete.php?id=${movies.id}" onclick="return confirm('Do you Really want to delete this movie')"><i class="fa-solid fa-trash"></i></i></i> Delete</a>
                     </td> `
           : ""
       }

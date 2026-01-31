@@ -68,19 +68,19 @@ $rows= $query->fetch(PDO::FETCH_ASSOC);
         <input type="Date" name="year" id="year" value="<?php echo $rows['year'] ?>"><br>
 
 
-        <label for="Rating">Enter Movie Rating: </label>
-        <select id="Rating" name="rating" value="<?php echo $rows['rating'] ?>" >
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-        </select>
+       <label for="Rating">Enter Movie Rating: </label>
+<select id="Rating" name="rating">
+    <option value="1" <?php if($rows['rating']==1) echo "selected"; ?>>1</option>
+    <option value="2" <?php if($rows['rating']==2) echo "selected"; ?>>2</option>
+    <option value="3" <?php if($rows['rating']==3) echo "selected"; ?>>3</option>
+    <option value="4" <?php if($rows['rating']==4) echo "selected"; ?>>4</option>
+    <option value="5" <?php if($rows['rating']==5) echo "selected"; ?>>5</option>
+    <option value="6" <?php if($rows['rating']==6) echo "selected"; ?>>6</option>
+    <option value="7" <?php if($rows['rating']==7) echo "selected"; ?>>7</option>
+    <option value="8" <?php if($rows['rating']==8) echo "selected"; ?>>8</option>
+    <option value="9" <?php if($rows['rating']==9) echo "selected"; ?>>9</option>
+    <option value="10" <?php if($rows['rating']==10) echo "selected"; ?>>10</option>
+</select>
 <div class="errors"><?php echo $empty['errors'] ?? "" ; ?></div>
         <button>Update Movie</button>
         <input type="hidden" name="id" value="<?php echo $rows['id'] ?>">
