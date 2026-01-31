@@ -12,6 +12,10 @@ body {
   min-height: 100vh;
   padding: 40px 20px;
   color: #333;
+
+
+
+
 }
 
 /* Page container */
@@ -42,9 +46,7 @@ a.btn {
   border-radius: 12px;
   font-size: 14px;
   font-weight: 600;
-
-
-   } 
+  } 
 
 a.btn:hover {
   background: #1f5fb8;

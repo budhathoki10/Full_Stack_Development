@@ -23,36 +23,12 @@ $rows= $query->fetch(PDO::FETCH_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="../Assets/CSS/edit.css">
-<style>
-    
-.errors{
-    color: red;
-    font-size: smaller;
-}
-
-    #back {
-        display: inline-block;
-        font-size: small;
-        color: #b19292;
-        text-decoration: none;
-        margin-top: 30px;
-    }
-
-    #back:hover {
-        display: inline-block;
-        font-size: medium;
-        color: #996868;
-        text-decoration: underline;
-
-
-    }
-    
-</style>
 
 <body>
     <form action="update.php" method="POST">
-        <h1>Update Movies</h1>
+        <h1> <i class="fa-solid fa-clapperboard"></i> Update Movies</h1>
         <label for="Moviename">Enter Movie name: </label>
         <input type="text" name="movie" id="Moviename" value="<?php echo $rows['Moviename'] ?>"> <br>
 
@@ -82,9 +58,9 @@ $rows= $query->fetch(PDO::FETCH_ASSOC);
     <option value="10" <?php if($rows['rating']==10) echo "selected"; ?>>10</option>
 </select>
 <div class="errors"><?php echo $empty['errors'] ?? "" ; ?></div>
-        <button>Update Movie</button>
+        <button>Update Movie </button>
         <input type="hidden" name="id" value="<?php echo $rows['id'] ?>">
-            <a href="index.php" id="back"> back to main</a>
+            <a href="index.php" id="back"> <i class="fa-solid fa-arrow-left-long"> </i> Back to index</a>
 
 
     </form>
