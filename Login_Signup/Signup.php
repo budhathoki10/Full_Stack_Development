@@ -55,7 +55,27 @@ $error['error']="this email is already registered";
     }else{
         $stmt= $conn-> prepare("INSERT INTO UserTable (name, email,password) values (?,?,?);");
 if($stmt->execute([$name, $email, $hashed_password]));
-header("Location:Login.php");
+                echo '<!DOCTYPE html>
+        <html>
+        <head>
+          <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        </head>
+        <body>
+          <script>
+            Swal.fire({
+              icon: "success",
+              title: "Registered Sucessfully",
+              showConfirmButton: true,
+              timer: 2000
+            }).then(() => {
+            // after popup redirect to index.php
+              window.location.href = "./Login.php";
+            });
+          </script>
+        </body>
+        </html>';
+
+// header("Location:Login.php");
     }
 }
 
@@ -76,7 +96,7 @@ header("Location:Login.php");
   <body>
     <section class="registerDiv">
       <form action=""  method="POST">
-        <label for="Name">Enter Your Name: </label>
+        <label for="Name">Enter Your Full Name: </label>
         <input type="text" name="name" />
         <div class="err"><?php echo $error['name']?? "" ;?></div>
 

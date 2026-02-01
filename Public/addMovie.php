@@ -21,16 +21,46 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($empty)) {
         $stmt = $conn->prepare("INSERT INTO MovieTable (Moviename, genres,cast,year,rating) values (?,?,?,?,?);");
         if ($stmt->execute([$Moviename, $Moviegenre, $Moviecast, $date, $Movierating])) {
-
-            echo '<script>
-        alert("Movie added successfully");
-        window.location.href = "index.php";
-    </script>';
+ echo '<!DOCTYPE html>
+        <html>
+        <head>
+          <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        </head>
+        <body>
+          <script>
+            Swal.fire({
+              icon: "success",
+              title: "Movie added successfully",
+              showConfirmButton: true,
+              timer: 2000
+            }).then(() => {
+            // after popup redirect to index.php
+              window.location.href = "index.php";
+            });
+          </script>
+        </body>
+        </html>';
 
         } else {
-            echo '<script>
-        alert("error in adding movie");
-    </script>';
+     echo '<!DOCTYPE html>
+        <html>
+        <head>
+          <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        </head>
+        <body>
+          <script>
+            Swal.fire({
+              icon: "error",
+              title: "error in adding movie",
+              showConfirmButton: true,
+              timer: 60000
+            }).then(() => {
+            // after popup redirect to index.php
+              window.location.href = "index.php";
+            });
+          </script>
+        </body>
+        </html>';
         }
 
 

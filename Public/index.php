@@ -19,9 +19,8 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="../Assets/CSS/index.css">
 </head>
 
-
 <body>
-   <?php require"../Assets/HTML/header.html"?>
+   <?php require "../Assets/HTML/header.html"?>
     <?php if (isAdmin()): ?>
         <button onclick=openForm() id="addMovie"> <i class="fa-solid fa-plus"></i> Add Movie</button>
 
@@ -63,14 +62,14 @@ if (isAdmin()) {
                 <?php if (isAdmin()): ?>
                     <td>
                         <a href="edit.php?id=<?= $movie['id'] ?>"> <i class="fa-solid fa-pen-to-square"></i> Edit</a>
-                        <a href="delete.php?id=<?= $movie['id'] ?>" onclick="return confirm('Delete this movie?')"><i class="fa-solid fa-trash"></i></i></i>Delete</a>
+                        <a href="deletepopup.php?id=<?= $movie['id'] ?>"><i class="fa-solid fa-trash"></i>Delete</a>
                     </td>
                 <?php endif; ?>
 
 
 
             </tr>
-            <a href="logout.php"><button class="logout" onclick="return confirm('Do you want to Logout')" ><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button></a>
+            <a href="logoutPopup.php"><button class="logout"  ><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button></a>
 
             <?php
         }

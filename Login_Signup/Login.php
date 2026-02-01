@@ -37,7 +37,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['role']    = $user['role'];
                 $_SESSION['user_id'] = $user['id'];
                 session_regenerate_id(true); 
-                header("Location:../Public/index.php");
+                echo '<!DOCTYPE html>
+        <html>
+        <head>
+          <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        </head>
+        <body>
+          <script>
+            Swal.fire({
+              icon: "success",
+              title: "Login Sucessfully",
+              showConfirmButton: true,
+              timer: 2000
+            }).then(() => {
+            // after popup redirect to index.php
+              window.location.href = "../Public/index.php";
+            });
+          </script>
+        </body>
+        </html>';
+
+                // header("Location:../Public/index.php");
             } else {
                 $error['error'] = "Incorrect passoword";
             }

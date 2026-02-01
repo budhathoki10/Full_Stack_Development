@@ -18,10 +18,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $updates= $conn->prepare("UPDATE  MovieTable set Moviename= ?, genres= ?, cast= ?, year=?, rating=? where id= ?");
     if($updates->execute([$movie,$moviegenre,$moviecast,$year,$rating,$id])){
             
- echo '<script>
-        alert("Movie Updated successfully");
-        window.location.href = "index.php";
-    </script>';
+ echo '<!DOCTYPE html>
+        <html>
+        <head>
+          <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        </head>
+        <body>
+          <script>
+            Swal.fire({
+              icon: "success",
+              title: "Movie Updated successfully",
+              showConfirmButton: true,
+              timer: 2000
+            }).then(() => {
+            // after popup redirect to index.php
+              window.location.href = "index.php";
+            });
+          </script>
+        </body>
+        </html>';
     }else{
             
  echo '<script>
