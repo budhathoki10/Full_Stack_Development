@@ -29,7 +29,7 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <br>
 
     <input type="text" placeholder="Enter Movie name to search" id="search"><i class="fa-solid fa-magnifying-glass" id="glass"></i>
-
+ <a href="logoutPopup.php"><button class="logout"  ><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button></a>
 
     <table id="table">
         <tr>
@@ -69,7 +69,7 @@ if (isAdmin()) {
 
 
             </tr>
-            <a href="logoutPopup.php"><button class="logout"  ><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button></a>
+           
 
             <?php
         }
