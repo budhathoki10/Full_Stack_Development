@@ -5,20 +5,20 @@ require "../Config/MovieDatabase.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $id = htmlspecialchars(trim($_POST['id']));
-    $movie = htmlspecialchars(trim($_POST['movie']));
+  $id = htmlspecialchars(trim($_POST['id']));
+  $movie = htmlspecialchars(trim($_POST['movie']));
 
-    $moviegenre = htmlspecialchars(trim($_POST['moviegenre']));
+  $moviegenre = htmlspecialchars(trim($_POST['moviegenre']));
 
-    $moviecast = htmlspecialchars(trim($_POST['moviecast']));
+  $moviecast = htmlspecialchars(trim($_POST['moviecast']));
 
-    $year = htmlspecialchars(trim($_POST['year']));
-    $rating = htmlspecialchars(trim($_POST['rating']));
-    
-    $updates= $conn->prepare("UPDATE  MovieTable set Moviename= ?, genres= ?, cast= ?, year=?, rating=? where id= ?");
-    if($updates->execute([$movie,$moviegenre,$moviecast,$year,$rating,$id])){
-            
- echo '<!DOCTYPE html>
+  $year = htmlspecialchars(trim($_POST['year']));
+  $rating = htmlspecialchars(trim($_POST['rating']));
+
+  $updates = $conn->prepare("UPDATE  MovieTable set Moviename= ?, genres= ?, cast= ?, year=?, rating=? where id= ?");
+  if ($updates->execute([$movie, $moviegenre, $moviecast, $year, $rating, $id])) {
+
+    echo '<!DOCTYPE html>
         <html>
         <head>
           <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -37,18 +37,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </script>
         </body>
         </html>';
-    }else{
-            
- echo '<script>
+  } else {
+
+    echo '<script>
         alert("Error in updating movie");
     </script>';
-    }
-
-
-
-
+  }
 }
-
-
-
 ?>

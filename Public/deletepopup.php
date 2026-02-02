@@ -3,9 +3,9 @@ require_once "../Controller/auth.php";
 require_once "../Controller/SessionCookie.php";
 require_once "../Config/MovieDatabase.php";
 
-$id= htmlspecialchars($_GET['id'])?? "";
-if(!$id){
-  echo 'no any id provided'; 
+$id = htmlspecialchars($_GET['id']) ?? "";
+if (!$id) {
+  echo 'no any id provided';
 }
 
 echo '<!DOCTYPE html>
@@ -30,7 +30,7 @@ echo '<!DOCTYPE html>
           showConfirmButton: true,
           timer: 2000
         }).then(() => {
-          window.location.href = "delete.php?id='. $id. '";
+          window.location.href = "delete.php?id=' . $id . '";
         });
       } else {
         

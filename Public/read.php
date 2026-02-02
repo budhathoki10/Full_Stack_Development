@@ -15,12 +15,14 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../Assets/CSS/read.css">
 </head>
 
 <body>
-   <?php require "../Assets/HTML/header.html"?>
+    <?php require "../Assets/HTML/header.html" ?>
     <?php if (isAdmin()): ?>
         <button onclick=openForm() id="addMovie"> <i class="fa-solid fa-plus"></i> Add Movie</button>
 
@@ -28,8 +30,10 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <?php endif; ?>
     <br>
 
-    <input type="text" placeholder="Enter Movie name to search" id="search"><i class="fa-solid fa-magnifying-glass" id="glass"></i>
- <a href="logoutPopup.php"><button class="logout"  ><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button></a>
+    <input type="text" placeholder="Enter Movie name to search" id="search"><i class="fa-solid fa-magnifying-glass"
+        id="glass"></i>
+    <a href="logoutPopup.php"><button class="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>
+            Logout</button></a>
 
     <table id="table">
         <tr>
@@ -40,11 +44,11 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <th>Rating</th>
 
 
-<?php
-if (isAdmin()) {
-    echo "<th>Actions</th>";
-}
-?>
+            <?php
+            if (isAdmin()) {
+                echo "<th>Actions</th>";
+            }
+            ?>
 
         </tr>
 
@@ -53,11 +57,11 @@ if (isAdmin()) {
         foreach ($movies as $movie) {
             ?>
             <tr>
-                <td><?php echo htmlspecialchars($movie['Moviename']); ?> </td>
-                <td><?php echo htmlspecialchars($movie['year']); ?> </td>
-                <td><?php echo htmlspecialchars($movie['genres']); ?> </td>
-                <td><?php echo htmlspecialchars($movie['cast']); ?> </td>
-                <td><?php echo htmlspecialchars($movie['rating']); ?> </td>
+                <td><?php echo htmlspecialchars(trim($movie['Moviename'])); ?> </td>
+                <td><?php echo htmlspecialchars(trim($movie['year'])); ?> </td>
+                <td><?php echo htmlspecialchars(trim($movie['genres'])); ?> </td>
+                <td><?php echo htmlspecialchars(trim($movie['cast'])); ?> </td>
+                <td><?php echo htmlspecialchars(trim($movie['rating'])); ?> </td>
 
                 <?php if (isAdmin()): ?>
                     <td>
@@ -69,7 +73,7 @@ if (isAdmin()) {
 
 
             </tr>
-           
+
 
             <?php
         }
@@ -77,9 +81,9 @@ if (isAdmin()) {
     </table>
 
 
-<script src="../Assets/JS/Ajax.js"></script>
+    <script src="../Assets/JS/Ajax.js"></script>
 </body>
 
 </html>
 
-<?php  require "../Assets/HTML/footer.html"; ?>
+<?php require "../Assets/HTML/footer.html"; ?>

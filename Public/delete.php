@@ -10,7 +10,7 @@ if (isset($_GET['id'])) {
     if ($delete->execute([$id])) {
         header("Location:read.php");
         exit;
-        
+
     }
 } else {
     echo 'no any id provided';

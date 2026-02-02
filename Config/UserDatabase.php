@@ -1,7 +1,7 @@
 <?php
 // $servername = "localhost";
-// $username   = "root";
-// $password   = "";
+// $username = "root";
+// $password = "";
 
 $servername = "localhost";
 $username   = "NP03CS4A240072";
@@ -15,7 +15,7 @@ try {
     $conn->exec("use NP03CS4A240072");
 
 
-    $sql= "CREATE TABLE IF NOT EXISTS UserTable (
+    $sql = "CREATE TABLE IF NOT EXISTS UserTable (
     id int primary key auto_increment,
     name varchar(250) not null, 
     email varchar (250) not null,
@@ -24,7 +24,7 @@ try {
     );
     ";
 
-    if($conn->query($sql)){
+    if ($conn->query($sql)) {
         // echo "table created sucessfully"; 
     }
 } catch (PDOException $e) {
