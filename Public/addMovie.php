@@ -14,9 +14,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty($Moviename) || empty($Moviegenre) || empty($Moviecast) || empty($date) || empty($Movierating)) {
         $empty["errors"] = "Please fill all the fields";
-
-
-
     }
     if (empty($empty)) {
         $stmt = $conn->prepare("INSERT INTO MovieTable (Moviename, genres,cast,year,rating) values (?,?,?,?,?);");
@@ -66,7 +63,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     }
 }
-
 
 ?>
 <!DOCTYPE html>
