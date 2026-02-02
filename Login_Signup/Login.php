@@ -58,14 +58,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               showConfirmButton: true,
               timer: 2000
             }).then(() => {
-            // after popup redirect to index.php
-              window.location.href = "../Public/index.php";
+            // after popup redirect to read.php
+              window.location.href = "../Public/read.php";
             });
           </script>
         </body>
         </html>';
 
-                // header("Location:../Public/index.php");
+                // header("Location:../Public/read.php");
             } else {
                 $error['error'] = "Incorrect passoword";
             }

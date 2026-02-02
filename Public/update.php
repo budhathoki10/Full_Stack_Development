@@ -31,8 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               showConfirmButton: true,
               timer: 2000
             }).then(() => {
-            // after popup redirect to index.php
-              window.location.href = "index.php";
+            // after popup redirect to read.php
+              window.location.href = "read.php";
             });
           </script>
         </body>

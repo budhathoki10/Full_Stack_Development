@@ -40,7 +40,7 @@ if(!is_string($name)){
 if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
     $error['email']="Please provide a valid email";
 }
-if(strlen($password)<6){
+if(strlen($password)<6 || !preg_match("/[A-Z]/", $password)){
      $error['password']="Weak password";
 }
 
@@ -68,7 +68,7 @@ if($stmt->execute([$name, $email, $hashed_password]));
               showConfirmButton: true,
               timer: 2000
             }).then(() => {
-            // after popup redirect to index.php
+
               window.location.href = "./Login.php";
             });
           </script>

@@ -8,7 +8,7 @@ if (isset($_GET['id'])) {
     $id = trim($_GET['id']);
     $delete = $conn->prepare("delete from MovieTable where id=?");
     if ($delete->execute([$id])) {
-        header("Location:index.php");
+        header("Location:read.php");
         exit;
         
     }

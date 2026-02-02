@@ -27,8 +27,8 @@ echo '<!DOCTYPE html>
         });
       } else {
         
-        // If cancelled, go back to dashboard or index
-        window.location.href = "./index.php";
+        // If cancelled, go back to dashboard or read
+        window.location.href = "./read.php";
       }
     });
   </script>

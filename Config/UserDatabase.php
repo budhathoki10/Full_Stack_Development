@@ -1,9 +1,7 @@
 <?php
 // $servername = "localhost";
-// $username   = "NP03CS4A240072";
-// // $username   = "root";
-// $password   = "jVmOwQ9Ztm";
-// // $password   = "";
+// $username   = "root";
+// $password   = "";
 
 $servername = "localhost";
 $username   = "NP03CS4A240072";
@@ -12,9 +10,9 @@ $password   = "jVmOwQ9Ztm";
 try {
     $conn = new PDO("mysql:host=$servername", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $conn->exec("CREATE DATABASE if not exists  NP03CS4A240072");
+    $conn->exec("CREATE DATABASE if not exists  Movie_application");
     // echo " Database created successfully!";
-$conn->exec("use NP03CS4A240072");
+$conn->exec("use Movie_application");
 
 
     $sql= "CREATE TABLE IF NOT EXISTS UserTable (
