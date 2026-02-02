@@ -80,63 +80,47 @@ button:hover {
 }
 
 
-table {
-  width: 100%;
+
+table { 
+  width: 100%; 
   border-collapse: collapse;
-  border-radius: 8px;
-  overflow: hidden;
-  margin-top: 20px;
-}
+   border-radius: 10px; 
+   border-collapse: collapse; 
+  }
+table, th, td,tr {
+   border: 2px solid #3e5871;
 
-table th {
-  background: #3e5871;
-  color: #ffffff;
-  padding: 14px;
-  font-size: 15px;
-  text-align: center;
-  font-weight: 600;
 }
-
-table td {
-  padding: 12px;
+table th { 
+  background: #3e5871; 
+  color: #ffffff; 
+  padding: 12px; 
+  font-weight: bold;
+  font-size: 16px; 
+  text-align: center; 
+  font-weight: 600; 
+}
+table td { 
+  padding: 12px; 
   font-size: 14px;
-  color: #2c3e50;
-  text-align: center;
-  border-bottom: 1px solid #e0e6ed;
-}
-
-table tr:nth-child(even) {
-  background: #f9fbfd;
-}
-
-table tr:hover {
-  background: #eef4fa;
-  transition: background 0.3s ease;
-}
-
-
-table a {
+   color: #000000; 
+   text-align: center; }
+/* Action links */ 
+table a { 
   color: #2d74da;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 13px;
-  margin: 0 6px;
-  transition: color 0.2s ease;
-}
-
-table a:hover {
+   text-decoration: none; 
+   font-weight: 600; font-size: 13px; 
+   margin: 0 6px; 
+   transition: color 0.2s ease; 
+  }
+table a:hover { 
   color: #1f5fb8;
-  text-decoration: underline;
-}
-
-table a[href*="delete"] {
-  color: #dc3545;
-}
+   text-decoration: underline; }
+table a[href*="delete"] { 
+  color: #dc3545; 
+} 
 
 
-table a[href*="delete"]:hover {
-  color: #b02a37;
-}
 
 .logout {
   position: fixed;
@@ -155,4 +139,4 @@ table a[href*="delete"]:hover {
 .logout:hover {
   background-color: #c93030;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
+} 

@@ -60,7 +60,7 @@ $rows= $query->fetch(PDO::FETCH_ASSOC);
 <div class="errors"><?php echo $empty['errors'] ?? "" ; ?></div>
         <button>Update Movie </button>
         <input type="hidden" name="id" value="<?php echo $rows['id'] ?>">
-            <a href="main.php" id="back"> <i class="fa-solid fa-arrow-left-long"> </i> Back to Main</a>
+            <a href="read.php" id="back"> <i class="fa-solid fa-arrow-left-long"> </i> Back to Main</a>
 
 
     </form>
