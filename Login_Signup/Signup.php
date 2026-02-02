@@ -47,7 +47,7 @@ if(strlen($password)<6 || !preg_match("/[A-Z]/", $password)){
 if(empty($error)){
     $hashed_password= password_hash($password,PASSWORD_BCRYPT);
 
-    $checkEmail= $conn->prepare("select * from Usertable where email= ?");
+    $checkEmail= $conn->prepare("select * from UserTable where email= ?");
     $checkEmail-> execute([$email]);
     if($checkEmail->rowCount() > 0){
 $error['error']="this email is already registered";
