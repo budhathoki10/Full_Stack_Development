@@ -2,7 +2,7 @@
 session_set_cookie_params([
     'lifetime' => 86400,  #expire after 1 day             
     'path'     => '/',     #cookie valid for entire domain and if we set /dashboard the cookie will be set only for dashboard      
-    'secure'   => false,     #send the cookie over both http and https
+    'secure'   => true,     #send the cookie over both http and https
     # if we do secure = true then the cookie will not send if the request is in plane http      
     'httponly' => true,    #java script cannot read the cookie via document.cookie          
     'samesite' => 'Lax'   #cookie will not send in another site           
