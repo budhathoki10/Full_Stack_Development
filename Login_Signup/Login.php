@@ -19,8 +19,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         
 
-    $email = htmlspecialchars($_POST['email']);
-    $passwords = htmlspecialchars($_POST['Password']);
+    $email = htmlspecialchars(trim($_POST['email']));
+    $passwords = htmlspecialchars(trim($_POST['Password']));
 
     if (empty($email) || empty($passwords)) {
         $error['error'] = "Please fill all the fields";
